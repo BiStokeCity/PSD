@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 
-.header-wp, .services-wp, .portfolio
-.jds-wp, .twitter-wp, .who-wp, .testimonials-wp,
-.contact-wp, .footer-wp{
+.header-wp,.testimonials-wp{
     height: 500px;
     background: gray;
-    /* margin-bottom: 5px */
 }
 
 .container-fluid{
     padding: 0 !important;
+}
+
+.container{
+    width: 70% !important;
 }
 
 /* header */
@@ -42,12 +43,23 @@
     align-items: center;
 }
 
+@media screen and (max-width: 992px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+    }
+  }
+
 .brand{
     color: white;
     font-weight: 800;
 
 }
-
+.menu .navbar-nav .nav-link{
+    color: white !important;
+}
 .menu ul{
     list-style: none;
 }
@@ -65,6 +77,10 @@
     border: 1px solid rgb(75, 202, 255);
 }
 
+.menu ul li:hover .nav-link{
+    color: rgb(75, 202, 255) !important;
+}
+
 /* HẾT MENU */
 
 .header{
@@ -73,6 +89,15 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 992px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+    }
+  }
 
 .header p {
     text-align: center;
@@ -101,7 +126,6 @@
 
 .portfolio-wp{
     background: white;
-    height: 450px;
     padding: 30px 0;
 }
 
@@ -160,3 +184,141 @@
 .portfolio-wp .content .row{
     margin-bottom: 10px;
 }
+/* HET portfolio */
+.jds-wp{
+    background: rgb(81, 95, 103);
+    /* height: 450px; */
+    padding: 30px 0;
+    color: white;
+}
+.jds-wp h3{
+    font-weight: 100;
+}
+.jds-wp p{
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.jds-wp a{
+    display: flex;
+    width: 100px;
+    color: rgb(53,63,70);
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(53,63,70) !important;
+    cursor: pointer;
+}
+
+.jds-wp a:hover{
+    background: rgb(75, 202, 255);
+    color: white !important;
+    border: none !important;
+}
+/* het jds */
+
+.twitter-wp{
+    background: rgb(75, 202, 255);
+    padding: 30px 0;
+    color: white;
+}
+
+.twitter-wp .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* het twitter */
+
+.who-wp{
+    background: url("./images/human-carmera.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 470px;
+    color: white;
+}
+.who-wp .title{
+    font-weight: 100;
+}
+.who-wp .content{
+    font-size: 14px;
+}
+
+.who-wp .social{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.who-wp .social li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+}
+
+.who-wp .social li a{
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* contact */
+.contact-wp{
+    background: url('./images/contact.jpg');
+    background-size: cover;
+}
+
+.bluur{
+    background: rgb(63, 73, 81);
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    display: none;
+}
+
+input {
+    border-radius: 0 !important;
+    border: 2px solid rgb(255, 255, 255)
+}
+
+label{
+    font-family: cursive !important;
+}
+
+.monospace{
+    font-family: monospace;
+}
+
+
+.footer-wp{
+    background: rgb(53, 63, 71);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-wp li{
+    display: inline-block;
+    color: white;
+    font-family: monospace;
+}
+
+
+.footer-wp p{
+    color: white;
+    font-family: monospace;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+      position: relative;
+      top: 100px;
+    }
+  }
